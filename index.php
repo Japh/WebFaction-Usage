@@ -24,7 +24,7 @@ foreach ($md as $v) {
 }
 $base = 0;
 if ($max > 0) {
-	$base = (122880 / $max) * 1;
+	$base = ((1024 * 256) / $max) * 1;
 	$base = round($base, 2);
 }
 ?>
