@@ -1,0 +1,5 @@
+#!/bin/bash
+#ps -u japheth -o pid,rss,command | awk '{print $0}{sum+=$2} END {print "Total", sum}' >> memlog
+ps -u japheth -o pid,rss,command | grep -e mpm -v | awk '{sum+=$2} END {print ",", sum}' >> ~/webapps/japheth/mem/memdata.csv
+#echo >> memlog
+#tail -20 memlog
